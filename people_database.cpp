@@ -63,4 +63,16 @@ public:
     }
     return byState;
   }
+
+  string emails()
+  {
+    string ems = "";
+    for (vector<Person>::iterator i = this->database.begin(); i != this->database.end(); i++)
+    {
+      ems.append(i->getEmail());
+      ems.append(",");
+    }
+    ems.pop_back();
+    return ems;
+  }
 };

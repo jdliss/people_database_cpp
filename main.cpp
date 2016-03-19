@@ -41,6 +41,11 @@ int main()
   for (vector<Person>::iterator i = allByState.begin(); i != allByState.end(); i++)
     i->printPerson();
 
+  cout << "\nCSV STRING OF EMAILS:" << endl;
+  cout << database.emails() << endl;
+
+  
+
   cout << endl;
   return 0;
 }

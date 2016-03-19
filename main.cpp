@@ -44,7 +44,8 @@ int main()
   cout << "\nCSV STRING OF EMAILS:" << endl;
   cout << database.emails() << endl;
 
-  
+  cout << "\nRETURN COUNT OF PEOPLE FROM STATE: CO" << endl;
+  cout << database.amountFromState("CO") << endl;
 
   cout << endl;
   return 0;

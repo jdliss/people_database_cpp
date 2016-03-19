@@ -75,4 +75,9 @@ public:
     ems.pop_back();
     return ems;
   }
+
+  int amountFromState(string state)
+  {
+    return returnAllbyState(state).size();
+  }
 };

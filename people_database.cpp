@@ -40,8 +40,7 @@ public:
   void removeByEmail(string email)
   {
     bool found = false;
-    for (vector<Person>::iterator i = this->database.begin();
-        i != this->database.end(); i++)
+    for (vector<Person>::iterator i = this->database.begin(); i != this->database.end(); i++)
     {
       if (i->getEmail() == email)
       {
@@ -52,5 +51,16 @@ public:
     }
     if (!found)
       cout << "Could not find person with email matching: " << email << endl;
+  }
+
+  vector<Person> returnAllbyState(string state)
+  {
+    vector<Person> byState;
+    for (vector<Person>::iterator i = this->database.begin(); i != this->database.end(); i++)
+    {
+      if (i->getState() == state)
+        byState.push_back(*i);
+    }
+    return byState;
   }
 };

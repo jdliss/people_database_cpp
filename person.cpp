@@ -7,7 +7,13 @@ using namespace std;
 class Person
 {
 public:
+  // Getters
+  string getFirstName() { return this->first_name; }
+  string getLastName() { return this->last_name; }
+  string getEmail() { return this->email; }
+  string getState() { return this-> state; }
 
+  // Constructors
   Person()
   {
     this->first_name = "First";
@@ -24,11 +30,10 @@ public:
     this->state = st;
   }
 
-  string getFirstName() { return this->first_name; }
-  string getLastName() { return this->last_name; }
-  string getEmail() { return this->email; }
-  string getState() { return this-> state; }
+  // Destructor
+  ~Person() {}
 
+  // Person functions
   vector<string> getInfo()
   {
     vector<string> info;

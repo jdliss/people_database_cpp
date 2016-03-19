@@ -10,7 +10,7 @@ int main()
   PeopleDatabase singleDatabase = PeopleDatabase("Claudia", "Keisenhofer", "CK@email.com", "Austria");
   singleDatabase.printInfo();
 
-  cout << "\nINITIZIALIZING DATABASE WITH ARRAY OF PEOPLE OBJECTS..." << endl;
+  cout << "\nINITIZIALIZING A NEW DATABASE WITH ARRAY OF PEOPLE OBJECTS..." << endl;
   vector<Person> people;
   people.push_back(Person("Jon", "Bernesser", "JB@email.com", "NY"));
   people.push_back(Person("Jon", "Liss", "JL@email.com", "CO"));
@@ -41,11 +41,11 @@ int main()
   for (vector<Person>::iterator i = allByState.begin(); i != allByState.end(); i++)
     i->printPerson();
 
+  cout << "\nCOUNT OF PEOPLE FROM STATE: CO" << endl;
+  cout << database.amountFromState("CO") << endl;
+
   cout << "\nCSV STRING OF EMAILS:" << endl;
   cout << database.emails() << endl;
-
-  cout << "\nRETURN COUNT OF PEOPLE FROM STATE: CO" << endl;
-  cout << database.amountFromState("CO") << endl;
 
   cout << endl;
   return 0;

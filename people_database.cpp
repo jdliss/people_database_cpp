@@ -4,27 +4,28 @@ using namespace std;
 
 class PeopleDatabase
 {
-
 private:
   vector<Person> database;
 
 public:
+  // Constructors
   PeopleDatabase() { this->database.push_back(Person()); }
-
-  PeopleDatabase(vector<Person> people)
-  {
-    for (int i = 0; i < people.size(); i++)
-      this->database.push_back(people[i]);
-  }
 
   PeopleDatabase(string first, string last, string email, string state)
   {
     database.push_back(Person(first, last, email, state));
   }
 
-  int size() { return this->database.size(); }
-  int capacity() { return this->database.capacity(); }
+  PeopleDatabase(vector<Person> people)
+  {
+    for (int i = 0; i < people.size(); i++)
+    this->database.push_back(people[i]);
+  }
 
+  // Destructor
+  ~PeopleDatabase() {}
+
+  // Database functions
   void addPeople(vector<Person> new_people)
   {
     for (int i = 0; i < new_people.size(); i++)
@@ -64,6 +65,11 @@ public:
     return byState;
   }
 
+  int amountFromState(string state)
+  {
+    return returnAllbyState(state).size();
+  }
+
   string emails()
   {
     string ems = "";
@@ -74,10 +80,5 @@ public:
     }
     ems.pop_back();
     return ems;
-  }
-
-  int amountFromState(string state)
-  {
-    return returnAllbyState(state).size();
   }
 };

@@ -22,9 +22,6 @@ public:
     this->database.push_back(people[i]);
   }
 
-  // Destructor
-  ~PeopleDatabase() {}
-
   // Database functions
   void addPeople(vector<Person> new_people)
   {

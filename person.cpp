@@ -30,9 +30,6 @@ public:
     this->state = st;
   }
 
-  // Destructor
-  ~Person() {}
-
   // Person functions
   vector<string> getInfo()
   {

@@ -43,14 +43,14 @@ public:
 
   void printPerson()
   {
-    cout << this->first_name << ", " <<
-            this->last_name << ", " <<
-            this->email << ", " <<
-            this->state << endl;
+    cout << this->first_name << ", "
+         << this->last_name << ", "
+         << this->email << ", "
+         << this->state << endl;
   }
 
 private:
-  string  first_name,
+  string first_name,
   last_name,
   email,
   state;

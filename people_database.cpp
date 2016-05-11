@@ -19,7 +19,7 @@ public:
   PeopleDatabase(vector<Person> people)
   {
     for (int i = 0; i < people.size(); i++)
-    this->database.push_back(people[i]);
+      this->database.push_back(people[i]);
   }
 
   // Database functions
